@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+// Estamos importando o arquivo React que criamos e referenciando aonde ele está (utilizando a palavra reservada FROM)
+import Banner from './componentes/Banner';
+import Formulario from './componentes/Formulario';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Banner />
+      <Formulario />
     </div>
   );
 }
