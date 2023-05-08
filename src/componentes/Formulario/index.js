@@ -5,15 +5,6 @@ import ListaSuspensa from '../ListaSuspensa';
 import './Formulario.css';
 
 const Formulario = (props) => {
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'DevOps',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ];
 
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
@@ -28,8 +19,13 @@ const Formulario = (props) => {
             cargo,
             imagem,
             time
-        });
-        console.log('O formulário foi enviado', nome, cargo, imagem, time);
+        })
+
+
+        setNome('');
+        setCargo('');
+        setImagem('');
+        setTime('');
     }
 
     return(
@@ -69,7 +65,7 @@ const Formulario = (props) => {
                 
                 <ListaSuspensa 
                     label="Time" 
-                    itens={times}
+                    itens={props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
